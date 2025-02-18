@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Jordan Smith">
+		<title>Portfolio - Jordan Delta</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="../images/delta-snail-bg.ico">
+		<!-- Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+		<link rel="stylesheet" type="text/css" href="../css/portfolio.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<!-- HEADER -->
+		<header class="fixed-top">
+			<nav class="navbar navbar-expand-sm bg-body-tertiary" data-bs-theme="dark">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="../">Jordan Delta</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="../">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="#">Portfolio</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!-- MAIN -->
+		<main class="mt-5">
+			<!-- TITLE -->
+			<section class="bg-medium container-fluid min-vh-100 py-5">
+				<div class="row">
+					<div class="col col-12 col-md-2 col-lg-3"></div>
+					<div class="col col-12 col-md-8 col-lg-6 container-fluid p-5 my-5">
+						<h1 class="text-center display-3">My Portfolio</h1>
+					</div>
+					<div class="col col-12 col-md-2 col-lg-3"></div>
+				</div>
+				<!-- PORTFOLIO -->
+				<div class="container-fluid">
+					<div class="row">
+						<!-- Controls -->
+						<div class="col col-12 col-lg-4 col-xl-3">
+							<div class="content-background h-auto container-fluid p-3 mb-3">
+								<h3>Categories</h3>
+								<ul class="check-list row row-cols-1 row-cols-sm-2 row-cols-lg-1 mt-2 gy-3">
+									<li>
+										<input type="checkbox" class="portfolio-filter" name="gamedev" id="check-gamedev" data-filter-name="gamedev">
+										<label for="check-gamedev">Game Development</label>
+									</li>
+									<li>
+										<input type="checkbox" class="portfolio-filter" name="design" id="check-design" data-filter-name="design">
+										<label for="check-design">Design</label>
+									</li>
+									<li>
+										<input type="checkbox" class="portfolio-filter" name="webdev" id="check-webdev" data-filter-name="webdev">
+										<label for="check-webdev">Web Development</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- Portfolio Items -->
+						<div class="col col-12 col-lg-8 col-xl-9 container-fluid">
+							<div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-3 g-3">
+								<div class="col portfolio-item drop-shadow" data-portfolio-category="webdev design">
+									<div class="portfolio-card">
+										<img class="portfolio-img" src="../images/jordan-delta-2025-portfolio-site-home.png" alt="screenshot of this website's homepage" title="This portfolio site">
+										<div class="p-3">
+											<div class="d-flex justify-content-between">
+												<h3 class="portfolio-title">This Site!</h3>
+												<h4 class="portfolio-date">2025</h4>
+											</div>
+											<p class="portfolio-desc">I built this personal website with a combination of bootstrap and custom CSS to showcase my skills and portfolio. This page uses JavaScript to filter my portfolio items by category.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col portfolio-item drop-shadow" data-portfolio-category="design">
+									<a class="portfolio-card arrow-wrapper" href="https://www.figma.com/proto/UD9e8QvIFOnnptkfTgCMVn/Delta-Cheese-V2?node-id=2183-26&t=vaBdGzfliTmE6qdE-1" target="_blank" aria-labelledby="link-delta-cheese">
+										<img class="portfolio-img" src="../images/jordan-delta-camosun-2024-delta-cheese-app.png" alt="screenshot of homepage and pairing page of the Delta Cheese app" title="Delta Cheese app prototype">
+										<div class="p-3">
+											<div class="d-flex justify-content-between">
+												<h3 class="portfolio-title">Delta Cheese</h3>
+												<h4 class="portfolio-date">2024</h4>
+											</div>
+											<p class="portfolio-desc">For my final project in the Design Thinking Course at Camosun College I was tasked with creating an 8-15 screen high-fidelity app prototype to provide information on several cheeses.</p>
+											<div class="d-flex justify-content-center align-content-center pt-3">
+												<img class="arrow-right" src="../images/arrow-right-white.png" alt="go to Delta Cheese app prototype" id="link-delta-cheese">
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col portfolio-item drop-shadow" data-portfolio-category="gamedev">
+									<div class="portfolio-card">
+										<img class="portfolio-img" src="../images/jordan-delta-spectrum-2019-treasure-of-torment.png" alt="gameplay screenshot of Treasure of Torment" title="Treasure of Torment (2019)">
+										<div class="p-3">
+											<div class="d-flex justify-content-between">
+												<h3 class="portfolio-title">Treasure of Torment</h3>
+												<h4 class="portfolio-date">2019</h4>
+											</div>
+											<p class="portfolio-desc">As my final project in a high school game programming course, I programmed <span class="fst-italic">Treasure of Torment</span> in Blitz Basic. It features platformer physics, enemy AI, and an event-timing system, all built from the ground up.</p>
+											<p>Due to use of assets from <span class="fst-italic">Shovel Knight</span> by Yacht Club Games, <span class="fst-italic">Treasure of Torment</span> can not be published.</p>
+										</div>
+									</div>
+								</div>
+								<div class="col portfolio-item drop-shadow" data-portfolio-category="gamedev">
+									<a class="portfolio-card arrow-wrapper" href="https://snailegg.itch.io/dont-breakout" target="_blank" aria-labelledby="link-dont-breakout">
+										<img class="portfolio-img" src="../images/jordan-delta-spectrum-2019-dont-breakout.png" alt="gameplay screenshot of DON'T Breakout" title="DON'T Breakout (2019)">
+										<div class="p-3">
+											<div class="d-flex justify-content-between">
+												<h3 class="portfolio-title">DON'T Breakout</h3>
+												<h4 class="portfolio-date">2019</h4>
+											</div>
+											<p class="portfolio-desc">As the first game I wrote in Blitz Basic for a high school game programming course, <span class="fst-italic">DON'T Breakout</span> implements procedural levels and high-score saving.</p>
+											<div class="d-flex justify-content-center pt-3">
+												<img class="arrow-right" src="../images/arrow-right-white.png" alt="go to DON'T Breakout game page" id="link-dont-breakout">
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col portfolio-item drop-shadow" data-portfolio-category="gamedev">
+									<a class="portfolio-card arrow-wrapper" href="https://snailegg.itch.io/aether" target="_blank" aria-labelledby="link-aether">
+										<img class="portfolio-img" src="../images/jordan-delta-spectrum-2018-aether.png" alt="gameplay screenshot of Aether" title="Aether (2018)">
+										<div class="p-3">
+											<div class="d-flex justify-content-between">
+												<h3 class="portfolio-title">Aether</h3>
+												<h4 class="portfolio-date">2018</h4>
+											</div>
+											<p class="portfolio-desc">As my final project for a GameMaker-based game development course in high school, <span class="fst-italic">Aether</span> experiments with collectibles, unlockable abilities, and multiple endings.</p>
+											<div class="d-flex justify-content-center pt-3">
+												<img class="arrow-right" src="../images/arrow-right-white.png" alt="go to Aether game page" id="link-aether">
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<img class="frame frame-tl" src="../images/triangle-frame-top-left.png" alt="">
+				<img class="frame frame-br" src="../images/triangle-frame-bottom-right.png" alt="">
+			</section>
+		</main>
+		<!-- FOOTER -->
+		<footer class="container-fluid pt-3">
+			<div class="row">
+				<!-- Copyright -->
+				<p class="col-12 col-md-6 text-center pt-md-1 text-md-start">Copyright &copy; Jordan Delta Smith 2025</p>
+			</div>
+		</footer>
+		<script src="../includes/portfolio.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	</body>
+</html>

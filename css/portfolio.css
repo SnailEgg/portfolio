@@ -1,0 +1,21 @@
+.portfolio-item {
+    animation-name: fade-and-drop-in;
+    animation-duration: 0.8s;
+    animation-fill-mode: backwards;
+}
+
+div.portfolio-card, a.portfolio-card {
+	display: block; /* make anchor tags with this class block elements */
+	background-color: var(--color-off-black);
+	color: var(--color-off-white);
+	clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0 100%);
+}
+
+.portfolio-img {
+	width: 100%;
+	aspect-ratio: 4/3;
+}
+
+.portfolio-title, .portfolio-date {
+	font-size: 1.5rem;
+}
