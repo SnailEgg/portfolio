@@ -12,9 +12,13 @@
 }
 
 body { 
-	font-family: "Merriweather", serif;
+	font-family: "Merriweather Sans", sans-serif;
 	color: var(--color-off-black);
 	overflow-x: clip;
+}
+
+.serif {
+	font-family: "Merriweather", serif;
 }
 
 p { margin-bottom: 0; } /* remove bootstrap default behaviour which adds bottom margin to p tags */

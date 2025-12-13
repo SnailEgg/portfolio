@@ -14,11 +14,12 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<!-- HEADER -->
 		<header class="fixed-top">
-			<nav class="navbar navbar-expand-sm bg-body-tertiary" data-bs-theme="dark">
+			<nav class="serif navbar navbar-expand-sm bg-body-tertiary" data-bs-theme="dark">
 				<div class="container-fluid">
 					<a class="navbar-brand" href="../">Jordan Delta</a>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +45,7 @@
 				<div class="row">
 					<div class="col col-12 col-md-2 col-lg-3"></div>
 					<div class="col col-12 col-md-8 col-lg-6 container-fluid p-5 my-5">
-						<h1 class="text-center display-3">My Portfolio</h1>
+						<h1 class="serif text-center display-3">My Portfolio</h1>
 					</div>
 					<div class="col col-12 col-md-2 col-lg-3"></div>
 				</div>
@@ -53,8 +54,8 @@
 					<div class="row">
 						<!-- Controls -->
 						<div class="col col-12 col-lg-4 col-xl-3">
-							<div class="content-background h-auto container-fluid p-3 mb-3">
-								<h3>Categories</h3>
+							<div class="content-background position-sticky h-auto container-fluid p-3 mb-3">
+								<h3 class="serif">Categories</h3>
 								<ul class="check-list row row-cols-1 row-cols-sm-2 row-cols-lg-1 mt-2 gy-3">
 									<li>
 										<input type="checkbox" class="portfolio-filter" name="gamedev" id="check-gamedev" data-filter-name="gamedev">
@@ -62,7 +63,7 @@
 									</li>
 									<li>
 										<input type="checkbox" class="portfolio-filter" name="design" id="check-design" data-filter-name="design">
-										<label for="check-design">Design</label>
+										<label for="check-design">UI/UX Design</label>
 									</li>
 									<li>
 										<input type="checkbox" class="portfolio-filter" name="webdev" id="check-webdev" data-filter-name="webdev">
@@ -74,11 +75,56 @@
 						<!-- Portfolio Items -->
 						<div class="col col-12 col-lg-8 col-xl-9 container-fluid">
 							<div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-3 g-3">
+								<div class="col portfolio-item drop-shadow" data-portfolio-category="gamedev webdev design">
+									<a class="portfolio-card arrow-wrapper" href="https://onesmallbreath.vercel.app/" target="_blank">
+										<img class="portfolio-img" src="../images/jordan-delta-2025-one-small-breath.png" alt="teaser image for One Small Breath" title="One Small Breath (2025)">
+										<div class="p-3">
+											<div class="serif d-flex justify-content-between">
+												<h3 class="portfolio-title">One Small Breath</h3>
+												<h4 class="portfolio-date">2025</h4>
+											</div>
+											<p class="portfolio-desc">A Next.js app made for the final project of a web apps course, <span class="fst-italic">One Small Breath</span> is an experimental game where you must talk to an AI chatbot to learn how to escape the room you wake up in.</p>
+											<div class="d-flex justify-content-center align-content-center pt-3">
+												<img class="arrow-right" src="../images/arrow-right-white.png" alt="go to Slidle game" id="link-slidle">
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col portfolio-item drop-shadow" data-portfolio-category="gamedev">
+									<a class="portfolio-card arrow-wrapper" href="https://edible-enigma.itch.io/lagum" target="_blank">
+										<img class="portfolio-img" src="../images/jordan-delta-mae-williams-2025-lagum.png" alt="Lagum thumbnail image" title="Lagum (2025)">
+										<div class="p-3">
+											<div class="serif d-flex justify-content-between">
+												<h3 class="portfolio-title">Lagum</h3>
+												<h4 class="portfolio-date">2025</h4>
+											</div>
+											<p class="portfolio-desc">Made with a friend in three days for the Patch Notes v1.0 game jam, in <span class="fst-italic">Lagum</span> you can slow the framerate for everything except yourself.</p>
+											<div class="d-flex justify-content-center align-content-center pt-3">
+												<img class="arrow-right" src="../images/arrow-right-white.png" alt="go to Slidle game" id="link-slidle">
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col portfolio-item drop-shadow" data-portfolio-category="gamedev webdev">
+									<a class="portfolio-card arrow-wrapper" href="https://snailegg.github.io/PlaySlidle/" target="_blank">
+										<img class="portfolio-img" src="../images/jordan-delta-2025-slidle-game-logo.png" alt="logo for Slidle" title="Slidle (2025)">
+										<div class="p-3">
+											<div class="serif d-flex justify-content-between">
+												<h3 class="portfolio-title">Slidle</h3>
+												<h4 class="portfolio-date">2025</h4>
+											</div>
+											<p class="portfolio-desc">My final project for a college web scripting course, <span class="fst-italic">Slidle</span> is a block-sliding puzzle game written with vanilla JS and JQuery UI. If I expand this game in the future, I will rewrite it with more modern tools, but for now, it works well as a demo.</p>
+											<div class="d-flex justify-content-center align-content-center pt-3">
+												<img class="arrow-right" src="../images/arrow-right-white.png" alt="go to Slidle game" id="link-slidle">
+											</div>
+										</div>
+									</a>
+								</div>
 								<div class="col portfolio-item drop-shadow" data-portfolio-category="webdev design">
 									<div class="portfolio-card">
 										<img class="portfolio-img" src="../images/jordan-delta-2025-portfolio-site-home.png" alt="screenshot of this website's homepage" title="This portfolio site">
 										<div class="p-3">
-											<div class="d-flex justify-content-between">
+											<div class="serif d-flex justify-content-between">
 												<h3 class="portfolio-title">This Site!</h3>
 												<h4 class="portfolio-date">2025</h4>
 											</div>
@@ -90,11 +136,11 @@
 									<a class="portfolio-card arrow-wrapper" href="https://www.figma.com/proto/UD9e8QvIFOnnptkfTgCMVn/Delta-Cheese-V2?node-id=2183-26&t=vaBdGzfliTmE6qdE-1" target="_blank" aria-labelledby="link-delta-cheese">
 										<img class="portfolio-img" src="../images/jordan-delta-camosun-2024-delta-cheese-app.png" alt="screenshot of homepage and pairing page of the Delta Cheese app" title="Delta Cheese app prototype">
 										<div class="p-3">
-											<div class="d-flex justify-content-between">
+											<div class="serif d-flex justify-content-between">
 												<h3 class="portfolio-title">Delta Cheese</h3>
 												<h4 class="portfolio-date">2024</h4>
 											</div>
-											<p class="portfolio-desc">For my final project in the Design Thinking Course at Camosun College I was tasked with creating an 8-15 screen high-fidelity app prototype to provide information on several cheeses.</p>
+											<p class="portfolio-desc">For my final project in a college design course, I was tasked with creating an 8-15 screen high-fidelity app prototype to provide information on several cheeses.</p>
 											<div class="d-flex justify-content-center align-content-center pt-3">
 												<img class="arrow-right" src="../images/arrow-right-white.png" alt="go to Delta Cheese app prototype" id="link-delta-cheese">
 											</div>
@@ -105,11 +151,11 @@
 									<div class="portfolio-card">
 										<img class="portfolio-img" src="../images/jordan-delta-spectrum-2019-treasure-of-torment.png" alt="gameplay screenshot of Treasure of Torment" title="Treasure of Torment (2019)">
 										<div class="p-3">
-											<div class="d-flex justify-content-between">
+											<div class="serif d-flex justify-content-between">
 												<h3 class="portfolio-title">Treasure of Torment</h3>
 												<h4 class="portfolio-date">2019</h4>
 											</div>
-											<p class="portfolio-desc">As my final project in a high school game programming course, I programmed <span class="fst-italic">Treasure of Torment</span> in Blitz Basic. It features platformer physics, enemy AI, and an event-timing system, all built from the ground up.</p>
+											<p class="portfolio-desc">My final project in a high school game programming course, I programmed <span class="fst-italic">Treasure of Torment</span> in Blitz Basic. It features platformer physics, enemy AI, and an event-timing system, all built from the ground up.</p>
 											<p>Due to use of assets from <span class="fst-italic">Shovel Knight</span> by Yacht Club Games, <span class="fst-italic">Treasure of Torment</span> can not be published.</p>
 										</div>
 									</div>
@@ -118,11 +164,11 @@
 									<a class="portfolio-card arrow-wrapper" href="https://snailegg.itch.io/dont-breakout" target="_blank" aria-labelledby="link-dont-breakout">
 										<img class="portfolio-img" src="../images/jordan-delta-spectrum-2019-dont-breakout.png" alt="gameplay screenshot of DON'T Breakout" title="DON'T Breakout (2019)">
 										<div class="p-3">
-											<div class="d-flex justify-content-between">
+											<div class="serif d-flex justify-content-between">
 												<h3 class="portfolio-title">DON'T Breakout</h3>
 												<h4 class="portfolio-date">2019</h4>
 											</div>
-											<p class="portfolio-desc">As the first game I wrote in Blitz Basic for a high school game programming course, <span class="fst-italic">DON'T Breakout</span> implements procedural levels and high-score saving.</p>
+											<p class="portfolio-desc">The first game I wrote in Blitz Basic for a high school game programming course, <span class="fst-italic">DON'T Breakout</span> implements procedural levels and high-score saving.</p>
 											<div class="d-flex justify-content-center pt-3">
 												<img class="arrow-right" src="../images/arrow-right-white.png" alt="go to DON'T Breakout game page" id="link-dont-breakout">
 											</div>
@@ -133,11 +179,11 @@
 									<a class="portfolio-card arrow-wrapper" href="https://snailegg.itch.io/aether" target="_blank" aria-labelledby="link-aether">
 										<img class="portfolio-img" src="../images/jordan-delta-spectrum-2018-aether.png" alt="gameplay screenshot of Aether" title="Aether (2018)">
 										<div class="p-3">
-											<div class="d-flex justify-content-between">
+											<div class="serif d-flex justify-content-between">
 												<h3 class="portfolio-title">Aether</h3>
 												<h4 class="portfolio-date">2018</h4>
 											</div>
-											<p class="portfolio-desc">As my final project for a GameMaker-based game development course in high school, <span class="fst-italic">Aether</span> experiments with collectibles, unlockable abilities, and multiple endings.</p>
+											<p class="portfolio-desc">My final project for a GameMaker-based game development course in high school, <span class="fst-italic">Aether</span> experiments with collectibles, unlockable abilities, and multiple endings.</p>
 											<div class="d-flex justify-content-center pt-3">
 												<img class="arrow-right" src="../images/arrow-right-white.png" alt="go to Aether game page" id="link-aether">
 											</div>
@@ -153,7 +199,7 @@
 			</section>
 		</main>
 		<!-- FOOTER -->
-		<footer class="container-fluid py-3">
+		<footer class="serif container-fluid py-3">
 			<div class="row">
 				<!-- Copyright -->
 				<p class="col-12 col-md-6 text-center text-md-start">Copyright &copy; Jordan Delta Smith 2025</p>
