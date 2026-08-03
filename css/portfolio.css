@@ -6,9 +6,15 @@
 
 div.portfolio-card, a.portfolio-card {
 	display: block; /* make anchor tags with this class block elements */
-	background-color: var(--color-off-black);
+	background-color: var(--color-dark);
 	color: var(--color-off-white);
 	clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0 100%);
+	height: 100%;
+}
+
+.portfolio-card .arrow-right {
+	position: absolute;
+	bottom: 1rem;
 }
 
 .portfolio-img {
@@ -18,4 +24,8 @@ div.portfolio-card, a.portfolio-card {
 
 .portfolio-title, .portfolio-date {
 	font-size: 1.5rem;
+}
+
+.portfolio-title {
+	padding-right: 1rem;
 }

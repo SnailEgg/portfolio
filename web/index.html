@@ -44,10 +44,10 @@
 		<!-- MAIN -->
 		<main class="mt-5">
 			<!-- TITLE -->
-			<section class="bg-medium container-fluid min-vh-100 py-5">
+			<section class="bg-light container-fluid min-vh-100 py-5">
 				<div class="row">
 					<div class="col col-12 col-md-2 col-lg-3"></div>
-					<div class="col col-12 col-md-8 col-lg-6 container-fluid p-5 my-5">
+					<div class="col col-12 col-md-8 col-lg-6 container-fluid p-5 mb-5">
 						<h1 class="serif text-center display-3">Web Development & Frontend Design</h1>
 					</div>
 					<div class="col col-12 col-md-2 col-lg-3"></div>
@@ -58,8 +58,8 @@
 						<!-- Portfolio Items -->
 						<div class="col col-12 col-lg-8 col-xl-9 container-fluid">
 							<div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-xl-3 g-3">
-								<div class="col portfolio-item drop-shadow" data-portfolio-category="gamedev webdev design">
-									<a class="portfolio-card arrow-wrapper" href="https://onesmallbreath.vercel.app/" target="_blank">
+								<div class="col portfolio-item drop-shadow">
+									<a class="portfolio-card arrow-wrapper" href="https://onesmallbreath.vercel.app/" target="_blank" aria-labelledby="link-breath">
 										<img class="portfolio-img" src="../images/jordan-delta-2025-one-small-breath.png" alt="teaser image for One Small Breath" title="One Small Breath (2025)">
 										<div class="p-3">
 											<div class="serif d-flex justify-content-between">
@@ -67,13 +67,13 @@
 												<h4 class="portfolio-date">2025</h4>
 											</div>
 											<p class="portfolio-desc">A Next.js app made for the final project of a web apps course, <span class="fst-italic">One Small Breath</span> is an experimental game where you must talk to an AI chatbot to learn how to escape the room you wake up in.</p>
-											<div class="d-flex justify-content-center align-content-center pt-3">
-												<img class="arrow-right" src="../images/arrow-right-white.png" alt="go to Slidle game" id="link-slidle">
+											<div class="d-flex justify-content-center align-content-center py-3">
+												<img class="arrow-right" src="../images/arrow-right-white.png" alt="go to One Small Breath game" id="link-breath">
 											</div>
 										</div>
 									</a>
 								</div>
-								<div class="col portfolio-item drop-shadow" data-portfolio-category="webdev design">
+								<div class="col portfolio-item drop-shadow">
 									<div class="portfolio-card">
 										<img class="portfolio-img" src="../images/jordan-delta-2025-portfolio-site-home.png" alt="screenshot of this website's homepage" title="This portfolio site">
 										<div class="p-3">
@@ -81,11 +81,11 @@
 												<h3 class="portfolio-title">This Site!</h3>
 												<h4 class="portfolio-date">2025</h4>
 											</div>
-											<p class="portfolio-desc">I built this personal website with a combination of bootstrap and custom CSS to showcase my skills and portfolio. This page uses JavaScript to filter my portfolio items by category.</p>
+											<p class="portfolio-desc">I built this personal website with a combination of bootstrap and custom CSS to showcase my skills and portfolio.</p>
 										</div>
 									</div>
 								</div>
-								<div class="col portfolio-item drop-shadow" data-portfolio-category="design">
+								<div class="col portfolio-item drop-shadow">
 									<a class="portfolio-card arrow-wrapper" href="https://www.figma.com/proto/UD9e8QvIFOnnptkfTgCMVn/Delta-Cheese-V2?node-id=2183-26&t=vaBdGzfliTmE6qdE-1" target="_blank" aria-labelledby="link-delta-cheese">
 										<img class="portfolio-img" src="../images/jordan-delta-camosun-2024-delta-cheese-app.png" alt="screenshot of homepage and pairing page of the Delta Cheese app" title="Delta Cheese app prototype">
 										<div class="p-3">
@@ -94,7 +94,7 @@
 												<h4 class="portfolio-date">2024</h4>
 											</div>
 											<p class="portfolio-desc">For my final project in a college design course, I was tasked with creating an 8-15 screen high-fidelity app prototype to provide information on several cheeses.</p>
-											<div class="d-flex justify-content-center align-content-center pt-3">
+											<div class="d-flex justify-content-center align-content-center py-3">
 												<img class="arrow-right" src="../images/arrow-right-white.png" alt="go to Delta Cheese app prototype" id="link-delta-cheese">
 											</div>
 										</div>
@@ -104,8 +104,10 @@
 						</div>
 					</div>
 				</div>
-				<img class="frame frame-tl" src="../images/triangle-frame-top-left.png" alt="">
-				<img class="frame frame-br" src="../images/triangle-frame-bottom-right.png" alt="">
+				<div class="basic-frame frame-front frame-br"></div>
+				<div class="basic-frame frame-back frame-br"></div>
+				<div class="basic-frame frame-front frame-tl"></div>
+				<div class="basic-frame frame-back frame-tl"></div>
 			</section>
 		</main>
 		<!-- FOOTER -->

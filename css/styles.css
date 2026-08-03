@@ -1,11 +1,12 @@
 :root {
-	--color-off-white: #fff5e7;
-	--color-off-black: #231502;
-	--color-off-grey: #5c5141;
-	--color-bright-white: #fcf9f5;
-	--color-light: #e7c798;
-	--color-medium: #b78a48;
-	--color-dark: #513c20;
+	--color-off-white: #fff6e8;
+	--color-off-black: #2f2104;
+	--color-dark-black: rgb(31, 21, 1);
+	--color-off-grey: #5c5442;
+	--color-bright-white: #fdfaf3;
+	--color-light: #f0dec2;
+	--color-medium: #97723c;
+	--color-dark: hsl(40, 60%, 22%);
 	--color-blue: #28a2cc;
 
 	--color-highlight: var(--color-blue);
@@ -26,7 +27,7 @@ p { margin-bottom: 0; } /* remove bootstrap default behaviour which adds bottom 
 section, footer { position:relative; z-index: 1; } /* put sections on home page in front of hero and allow frame images to display correctly */
 
 footer { 
-	background-color: var(--color-off-black);
+	background-color: var(--color-dark-black);
 	color: var(--color-off-white);
 }
 
@@ -48,6 +49,16 @@ footer {
 	filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.50));
 }
 
+.bg-bright {
+	background-color: var(--color-bright-white);
+	color: var(--color-off-black);
+}
+
+.bg-light {
+	background-color: var(--color-light) !important;
+	color: var(--color-off-black);
+}
+
 .bg-medium {
 	background-color: var(--color-medium);
 	color: var(--color-off-black);
@@ -60,7 +71,7 @@ footer {
 
 
 /* navbar colour overrides */
-.navbar { --bs-tertiary-bg-rgb: 23,15,2; }
+.navbar { --bs-tertiary-bg-rgb: 31, 21, 1; }
 
 .navbar-brand { 
 	--bs-navbar-brand-color: var(--color-off-white);
@@ -104,6 +115,35 @@ img.frame {
 .frame-tr { top: 0; right: 0; }
 .frame-bl { bottom: 0; left: 0; }
 .frame-br { bottom: 0; right: 0; }
+
+.basic-frame {
+	position: absolute;
+}
+
+.basic-frame.frame-front {
+	width: 380px;
+	max-width: 50%;
+	aspect-ratio: 4 / 1;
+	background-color: var(--color-off-black);
+	z-index: -1;
+}
+
+.basic-frame.frame-back {
+	width: 760px;
+	max-width: 100%;
+	aspect-ratio: 12 / 1;
+	background-color: var(--color-medium);
+	z-index: -2;
+}
+
+.basic-frame.frame-br {
+	clip-path: polygon(0 100%, 100% 100%, 100% 0);
+}
+
+.basic-frame.frame-tl {
+	clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
 
 
 /* checkbox list styles */
