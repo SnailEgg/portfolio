@@ -64,8 +64,13 @@ footer {
 	color: var(--color-off-black);
 }
 
+.bg-dark {
+	background-color: var(--color-dark) !important;
+	color: var(--color-off-white);
+}
+
 .bg-black {
-	background-color: var(--color-off-black);
+	background-color: var(--color-off-black) !important;
 	color: var(--color-off-white);
 }
 
