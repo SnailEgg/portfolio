@@ -123,20 +123,17 @@ img.frame {
 
 .basic-frame {
 	position: absolute;
+	width: 70%;
+	aspect-ratio: 6 / 1;
+	max-height: 5rem;
 }
 
 .basic-frame.frame-front {
-	width: 380px;
-	max-width: 50%;
-	aspect-ratio: 4 / 1;
 	background-color: var(--color-off-black);
 	z-index: -1;
 }
 
 .basic-frame.frame-back {
-	width: 760px;
-	max-width: 100%;
-	aspect-ratio: 12 / 1;
 	background-color: var(--color-medium);
 	z-index: -2;
 }
@@ -149,6 +146,22 @@ img.frame {
 	clip-path: polygon(0 0, 100% 0, 0 100%);
 }
 
+.basic-frame.frame-tr {
+	clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.basic-frame.frame-bl {
+	clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+
+@media (width >= 1000px) {
+	.responsive-frame {
+		height: 70% !important;
+		aspect-ratio: 1 / 8 !important;
+		max-width: 4rem;
+		max-height: none !important;
+	}
+}
 
 
 /* checkbox list styles */
