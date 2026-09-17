@@ -97,15 +97,15 @@ footer {
 	color: inherit; 
 }
 
-.arrow-wrapper img { transition: transform 0.5s; }
+.arrow-wrapper .arrow-right, .arrow-wrapper .arrow-down { transition: transform 0.5s; }
 
-.arrow-wrapper .arrow-right { width: 3rem; }
+.arrow-wrapper img.arrow-right { width: 3rem; }
 
-.arrow-wrapper:hover .arrow-right { transform: translateX(50%); }
+.arrow-wrapper:hover .arrow-right { transform: translateX(1.5rem); }
 
-.arrow-wrapper .arrow-down { height: 3rem; }
+.arrow-wrapper img.arrow-down { height: 3rem; }
 
-.arrow-wrapper:hover .arrow-down { transform: translateY(50%); }
+.arrow-wrapper:hover .arrow-down { transform: translateY(1.5rem); }
 
 
 /* frame image styles */

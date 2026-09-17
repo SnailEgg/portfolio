@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="author" content="Jordan Smith">
+		<title>Smile for the Camera - Jordan Delta Smith</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="../../images/delta-snail-bg.ico">
+		<!-- Stylesheets -->
+		<link rel="stylesheet" type="text/css" href="../../css/styles.css">
+		<link rel="stylesheet" type="text/css" href="../../css/portfolio.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<!-- HEADER -->
+		<header class="fixed-top">
+			<nav class="serif navbar navbar-expand-sm bg-body-tertiary" data-bs-theme="dark">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="../">Jordan Delta Smith</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="../../">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="../../games">Games</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="../../web">Web</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!-- MAIN -->
+		<main class="mt-5">
+			<!-- TITLE -->
+			<section class="bg-light min-vh-100 py-sm-3 py-md-4 py-lg-5">
+                <div class="container container-md py-5">
+                    <div class="row row-cols-1 row-cols-lg-2 px-3 pb-5 flex-column-reverse flex-lg-row">
+                        <div class="col col-12 col-lg-8">
+                            <h1 class="serif text-center mb-4">Smile for the Camera (2026)</h1>
+                            <p>
+                                The inspiration for this project came from the excellent 2021 game <span class="fst-italic">Before Your Eyes</span>, which uses the player's webcam 
+                                to allow the game to respond to the player's real-life blinks. I wanted to see if this concept could be extended, and settled on the idea of detecting
+                                the player's emotion through their facial expressions.
+                            </p>
+                            <p class="pt-2">
+                                Read on to learn about a few of the challenges I faced in engineering, designing, and creating the visual style of this game.
+                            </p>
+                            <h3 class="pt-4 pb-1">Engineering</h3>
+                            <p>
+                                Security and user privacy was a priority for me, so I chose not to use any cloud-based neural network services or pre-existing Unreal Engine plugins. 
+                                This meant I had to implement the real-time emotion recognition myself. I settled on the model ResMaskNet because its relatively small size meant I 
+                                could package it with the game and run it locally on the user's computer.
+                            </p>
+                            <p class="pt-2">
+                                I wrote a Game Instance Subsystem in the Unreal project to run an external process on startup which takes snapshots from the user's webcam and 
+                                runs them through ResMaskNet to return probabilities for each of the possible emotions (Neutral, Happy, Sad, Anger, Surprise, Fear, Disgust). This
+                                process also acts as a client, continuously sending the emotion data to a server within the game. I initially created this process as a Python script 
+                                running on an embedded Python installation, but to simplify the file structure of the final game package, I used PyInstaller to bundle this into a 
+                                standalone executable near the end of development.
+                            </p>
+                            <p class="pt-2">
+                                Using PyTorch, the neural network is able to run on CUDA-capable GPUs. This speeds up the emotion detection in comparison to running on the CPU, and 
+                                in the end, the system I built detects emotions fast enough that the delay is nearly unnoticeable, creating a very responsive gameplay experience.
+                            </p>
+                            <h3 class="pt-4 pb-1">Design</h3>
+                            <p>
+                                During testing, I found that the emotion detection works best when players are being very expressive in particular ways. For example, ResMaskNet detected
+                                anger most reliably if the player opened their mouth and scrunched their eyebrows as if they were screaming. This fact inspired the fire-breathing ability 
+                                in the game, but it also meant I needed a way to communicate to the player what sort of facial expressions to make.
+                            </p>
+                            <p class="pt-2">
+                                The game already needed a calibration step to improve the accuracy of the emotion recognition for each player, so I used this process as an opportunity to
+                                show the player example faces to mimic. I drew cartoon faces each with eyebrows, eyes, and mouths. These faces appear at each step of the calibration when
+                                the player is prompted to express each emotion.
+                            </p>
+                            <p class="pt-2">
+                                This subtle suggestion worked well, and when the game was demonstrated at a public event, players intuitively made the intended faces.
+                            </p>
+                            <h3 class="pt-4 pb-1">Visuals</h3>
+                            <p>
+                                With the game shaping up to be a light and playful experience, I knew I needed a similarly playful visual style to match. Each emotion the game can detect
+                                controls a particular ability the player has in the game (e.g. breathe fire, summon a raincloud), and to make these abilities feel fun, I created Niagara
+                                System particle effects that looked good under the post-process cel shader I had created.
+                            </p>
+                            <p class="pt-2">
+                                This involved using simple meshes (spheres, hearts, raindrops) and animating their scale and colour over their lifetime in various ways to suit each ability.
+                                My initial approaches to these effects involved sprites with opacity, but this didn't play well with the cel-shader and felt out of place in a game where 
+                                everything is textured with flat colours. Using opaque meshes and scaling them to and from zero to keep them looking natural, I was still able to give each
+                                effect its own flair with different scale and colour curves. From a raincloud fading into view to a firework burst suddenly appearing and twinkling away, 
+                                each effect feels unique.
+                            </p>
+                        </div>
+                        <div class="col col-12 col-lg-4 pl-lg-3 pb-4">
+                            <a class="bg-black p-2 pb-3 mt-3 mt-lg-0 arrow-wrapper d-flex flex-column align-items-center" href="https://deltasnail.itch.io/smile-for-the-camera/" target="_blank" aria-labelledby="link-smile">
+                                <img src="../../images/jordan-delta-smith-2026-smile-for-the-camera-logo.png" class="portfolio-img"/>
+                                <p class="text-center py-2 text-white">See the game</p>
+                                <img class="arrow-right" src="../../images/arrow-right-white.png" alt="go to Smile for the Camera game" id="link-smile">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+				<div class="basic-frame frame-front frame-br"></div>
+				<div class="basic-frame frame-back frame-bl"></div>
+				<div class="basic-frame frame-front frame-tl"></div>
+				<div class="basic-frame frame-back frame-tr"></div>
+			</section>
+		</main>
+		<!-- FOOTER -->
+		<footer class="serif container-fluid py-3">
+			<div class="row">
+				<!-- Copyright -->
+				<p class="col-12 col-md-6 text-center text-md-start">Copyright &copy; Jordan Delta Smith 2026</p>
+			</div>
+		</footer>
+		<script src="../includes/portfolio.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	</body>
+</html>
