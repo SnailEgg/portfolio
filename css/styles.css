@@ -91,6 +91,14 @@ footer {
 }
 
 
+/* modal sizing and position overrides */
+.modal-dialog {
+	--bs-modal-width: 960px;
+	top: 50vh;
+	transform: translateY(-50%) !important;
+}
+
+
 /* link arrow styles */
 .arrow-wrapper { 
 	text-decoration: none; 
