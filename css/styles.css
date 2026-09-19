@@ -8,8 +8,10 @@
 	--color-medium: #97723c;
 	--color-dark: hsl(40, 60%, 22%);
 	--color-blue: #28a2cc;
+	--color-dark-blue: hsl(195, 80%, 35%);
 
 	--color-highlight: var(--color-blue);
+	--color-highlight-hover: var(--color-dark-blue);
 }
 
 body { 
