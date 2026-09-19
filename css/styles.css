@@ -26,6 +26,11 @@ body {
 
 p { margin-bottom: 0; } /* remove bootstrap default behaviour which adds bottom margin to p tags */
 
+a {
+	text-decoration: none;
+	color: var(--color-highlight);
+}
+
 section, footer { position:relative; z-index: 1; } /* put sections on home page in front of hero and allow frame images to display correctly */
 
 footer { 
