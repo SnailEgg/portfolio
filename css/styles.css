@@ -31,6 +31,11 @@ a {
 	color: var(--color-highlight);
 }
 
+.sticky {
+	position: sticky;
+	top: 5rem;
+}
+
 section, footer { position:relative; z-index: 1; } /* put sections on home page in front of hero and allow frame images to display correctly */
 
 footer { 
