@@ -84,6 +84,7 @@ footer {
 .bg-black {
 	background-color: var(--color-off-black) !important;
 	color: var(--color-off-white);
+	--bs-heading-color: var(--color-off-white);
 }
 
 
@@ -209,6 +210,10 @@ ul.check-list label {
 
 
 /* form styling */
+.form-control {
+	--bs-body-bg: var(--color-off-white);
+}
+
 .form-contact input, .form-contact textarea {
 	width: 100%;
 	padding: 1rem;
@@ -230,6 +235,11 @@ ul.check-list label {
 .form-contact input:focus, .form-contact textarea:focus {
 	outline: none;
 	border: 1px solid var(--color-highlight);
+}
+
+.form-floating {
+	--bs-body-bg: var(--color-off-white);
+	color: var(--color-off-black);
 }
 
 .submit-button {
