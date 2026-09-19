@@ -93,9 +93,18 @@ footer {
 
 /* modal sizing and position overrides */
 .modal-dialog {
-	--bs-modal-width: 960px;
+	--bs-modal-width: calc(100vw - 2rem);
+	max-width: max-content;
 	top: 50vh;
 	transform: translateY(-50%) !important;
+}
+
+.modal-content {
+	max-width: max-content;
+}
+
+.modal-content img {
+	max-height: calc(100vh - 5rem);
 }
 
 
@@ -107,7 +116,7 @@ footer {
 
 .arrow-wrapper .arrow-right, .arrow-wrapper .arrow-down { transition: transform 0.5s; }
 
-.arrow-wrapper img.arrow-right { width: 3rem; }
+.arrow-wrapper img.arrow-right, .arrow-wrapper .arrow-right img { width: 3rem; }
 
 .arrow-wrapper:hover .arrow-right { transform: translateX(1.5rem); }
 
